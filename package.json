@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@angular/common": "8.2.7",
-    "@angular/compiler": "8.2.7",
-    "@angular/core": "8.2.7",
-    "@angular/forms": "8.2.7",
-    "@angular/platform-browser": "8.2.7",
-    "@angular/platform-browser-dynamic": "8.2.7",
-    "@angular/router": "8.2.7",
+    "@angular/common": "8.2.14",
+    "@angular/compiler": "8.2.14",
+    "@angular/core": "8.2.14",
+    "@angular/forms": "8.2.14",
+    "@angular/platform-browser": "8.2.14",
+    "@angular/platform-browser-dynamic": "8.2.14",
+    "@angular/router": "8.2.14",
     "@elastic/apm-rum-angular": "^0.1.0",
     "core-js": "2.4.1",
-    "rxjs": "6.5.3",
+    "rxjs": "6.5.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1",
     "rxjs-compat": "^6.0.0-rc.0"
@@ -25,7 +25,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:prod": "ng build --prod",
-    "start:prod": "npm run build:prod && npx http-server dist/my-app -p 8081"
+    "start:prod": "npm run build:prod && npx http-server dist/my-app -p 8081",
+    "preinstall": "npx npm-force-resolutions"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.23",
@@ -47,5 +48,8 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.5.3"
+  },
+  "resolutions": {
+    "minimist": "1.2.5"
   }
 }
